@@ -58,19 +58,14 @@ class BinaryTree
     result = nil
 
     until nodes.length == 0 || result 
-      new_nodes = []
-        until nodes.length == 0 || result 
-          current_node = nodes.pop
+      current_node = nodes.pop
 
-          if current_node.value == target
-            result = current_node
-          else
-            new_nodes << current_node.left_child if current_node.left_child
-            new_nodes << current_node.right_child if current_node.right_child
-          end
-        end
-
-      nodes.concat(new_nodes)
+      if current_node.value == target
+        result = current_node
+      else
+        nodes << current_node.left_child if current_node.left_child
+        nodes << current_node.right_child if current_node.right_child
+      end
     end
 
     result
