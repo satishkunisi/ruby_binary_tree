@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative './node'
+require_relative '../node'
 
 class TestNode < MiniTest::Unit::TestCase
   def setup
